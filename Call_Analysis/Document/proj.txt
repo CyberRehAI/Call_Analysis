@@ -1,0 +1,563 @@
+## 1.     
+ Introduction 
+
+ 
+ 
+Customer-agent interactions
+ in call centers hold valuable insights into customer mood, intent,
+
+ 
+ 
+and buying probability.
+ Traditional sentiment analysis focuses only on positive/negative
+ classification, but real conversations involve tone, emotions, and
+ conversational flow. This project aims to build an AI-powered system that
+ analyzes both audio and text features from call recordings to predict the
+ probability of a sale. The system will also provide visual dashboards to help
+ call center managers improve strategies.
+
+ 
+ 
+## 2.     
+ Literature
+ Review
+
+ 
+ 
+1. IBM Watson
+ Tone Analyzer – Detects emotions in text but lacks audio analysis. Shortcoming:
+ No multimodal support.
+
+ 
+ 
+2. Amazon
+ Contact Lens – Provides transcription + sentiment but costly. Shortcoming: Not
+ open-source/student-friendly.
+
+ 
+ 
+3. Google Cloud
+ Speech + Sentiment – Speech to text + sentiment but no sale prediction.
+ Shortcoming: Limited integration.
+
+ 
+ 
+ 
+
+ 
+ 
+## 3.      Benchmarking
+
+ 
+ 
+
+  
+
+   
+
+   
+Feature
+
+   
+
+   
+
+   
+IBM Watson
+
+   
+
+   
+
+   
+Amazon Contact
+   Lens
+
+   
+
+   
+
+   
+Google Cloud
+   APIs
+
+   
+
+   
+
+   
+Proposed
+   System
+
+   
+
+  
+
+  
+
+   
+
+   
+Text Sentiment
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+  
+
+   
+
+   
+Audio Emotion
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+  
+
+   
+
+   
+Conversation
+   Flow
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Partial
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+  
+
+   
+
+   
+Sale
+   Prediction
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+  
+
+   
+
+   
+Dashboard
+   Insights
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+Yes
+
+   
+
+   
+
+   
+Limited
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+  
+
+   
+
+   
+Cost Effective
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+No
+
+   
+
+   
+
+   
+Yes
+
+   
+
+  
+
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+## 4.      Problem Statement
+
+ 
+ 
+Call centers struggle to
+ identify customer intent and predict the likelihood of sales during calls.
+ Existing systems either provide only basic sentiment analysis or are too
+ costly. There is no affordable, open-source solution that combines audio, text,
+ and temporal sentiment into a predictive model for sale probability. This
+ project aims to solve that gap.
+
+ 
+ 
+## 5.     
+ Problem
+ Solution
+
+ 
+ 
+The proposed solution is a
+ multimodal sentiment analysis system using Whisper for transcription,
+ Pyannote.audio for speaker diarization, BERT/DistilBERT for text sentiment,
+ CNN+LSTM for audio emotion detection, and XGBoost/LSTM for sale prediction.
+ Outputs include dashboards with sentiment curves, conversion probability, and
+ agent insights.
+
+ 
+ 
+## 6.     
+ Advantages/Benefits
+ of proposed system
+
+ 
+ 
+• Detects customer mood and
+ objections.
+
+ 
+ 
+• Predicts sale probability
+ (0–100%).
+
+ 
+ 
+• Provides visual
+ sentiment/emotion curves.
+
+ 
+ 
+• Improves agent
+ performance feedback.
+
+ 
+ 
+• Uses free/open-source
+ tools (student-friendly).
+
+ 
+ 
+• Can be extended for
+ real-time analysis.
+
+ 
+ 
+## 7.     
+ Scope
+
+ 
+ 
+This project
+ includes importing call recordings, transcription, diarization, feature
+ extraction, prediction modeling, and dashboard visualization. Excludes
+ enterprise real-time deployment.
+
+ 
+ 
+Modules:
+ 1. Data Preprocessing
+ 2. Feature Extraction
+ 3. Sentiment & Emotion Models
+ 4. Sale Prediction Model
+ 5. Visualization Dashboard
+
+ 
+ 
+ 
+
+ 
+ 
+## 8.      Software Methodology
+
+ 
+ 
+Agile methodology will be
+ used for iterative model training and dashboard development.
+
+ 
+ 
+## 9.     
+ Tools
+ and Technologies
+
+ 
+ 
+Python 3.10, PyTorch 2.2,
+ Hugging Face Transformers, Pyannote.audio, Librosa, Whisper, PostgreSQL 15,
+ MongoDB, React 18, Flask/FastAPI.
+
+ 
+ 
+## 10.  
+ Concepts
+
+ 
+ 
+NLP Sentiment
+ Analysis, Speech Emotion Recognition, Feature Fusion, Explainable AI.
+
+ 
+ 
+ 
+
+ 
+ 
+## 11.   Intended Users
+
+ 
+ 
+Call center
+ managers, agents, sales analysts, and researchers
+
+ 
+ 
+ 
+
+ 
+ 
+## 12.   Mockups
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+## 13.   Timeline
+
+ 
+ 
+Weeks 1–2:
+ Literature review & dataset collection
+ Weeks 3–4: Preprocessing
+ Weeks 5–6: Feature extraction
+ Weeks 7–8: Model training
+ Week 9: Dashboard development
+ Week 10: Integration & testing
+ Weeks 11–12: Documentation & report.
+
+ 
+ 
+.
+
+ 
+ 
+## 14.  
+ Conclusion
+
+ 
+ 
+This project
+ proposes an AI-powered sentiment analysis system predicting sale probability
+ using multimodal data. It provides low-cost, open-source, and student-friendly
+ tools with web-based dashboards.
+
+ 
+ 
+## 15.   References
+
+ 
+ 
+[1] IBM Watson
+ Tone Analyzer
+
+ 
+ 
+[2] Amazon
+ Contact Lens
+
+ 
+ 
+[3] Google Cloud
+ APIs
+
+ 
+ 
+[4] Hugging Face
+ Transformers
+
+ 
+ 
+[5]
+ Pyannote.audio
+
